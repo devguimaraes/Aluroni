@@ -1,7 +1,9 @@
+import Cardapio from '../Pages/Cardapio';
+
 function App() {
 	return (
 		<div className="App">
-			<h1>Olá, mundo!</h1>
+			<Cardapio />
 		</div>
 	);
 }
