@@ -6,6 +6,8 @@ import opcoes from './opcoes.json';
 
 export default function Ordenador({ ordenador, setOrdenador }) {
 	const [aberto, setAberto] = useState(false);
+	const nomeOrdenador =
+		ordenador && opcoes.find((opcao) => opcao.value === ordenador)?.nome;
 	return (
 		<button
 			type="button"
@@ -15,7 +17,7 @@ export default function Ordenador({ ordenador, setOrdenador }) {
 			}}
 			onBlur={() => setAberto(false)}
 		>
-			<span className="text-white">{ordenador || 'Ordenar Por'}</span>
+			<span className="text-white">{nomeOrdenador || 'Ordenar Por'}</span>
 
 			{aberto ? (
 				<MdKeyboardArrowUp size={20} color="white" />
