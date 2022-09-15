@@ -3,11 +3,13 @@ import SVG from 'react-inlinesvg';
 import logo from '../../logo.svg';
 import Buscador from '../Buscador';
 import Filtros from '../Filtros';
+import Ordenador from '../Ordenador';
 // TODO verificar pq imagem de cabecalho nao carrega no build do projeto
 // estilizacao do componente header no index.css
 export default function Cardapio() {
 	const [busca, setBusca] = useState('');
 	const [filtro, setFiltro] = useState(null);
+	const [ordenador, setOrdenador] = useState('');
 
 	return (
 		<main className="w-full flex flex-col flex-wrap box-border">
@@ -25,6 +27,7 @@ export default function Cardapio() {
 				<Buscador busca={busca} setBusca={setBusca} />
 				<div className="flex items-center flex-wrap mb-7 w-full">
 					<Filtros filtro={filtro} setFiltro={setFiltro} />
+					<Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
 				</div>
 			</section>
 		</main>

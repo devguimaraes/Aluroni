@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.options {
+		@apply absolute left-0 flex-col top-full w-full active:flex transition-all ease-in-out delay-150;
+	}
+
+	.option {
+		@apply items-center bg-grey border-t-2 border-solid border-light-grey justify-center text-black h-10 to-inherit hover:bg-violet-900 hover:cursor-pointer hover:text-white focus:bg-violet-900 focus:cursor-pointer focus:text-white;
+	}
+}
+
 * {
 	font-family: 'Italiana', serif;
 	box-sizing: border-box;
