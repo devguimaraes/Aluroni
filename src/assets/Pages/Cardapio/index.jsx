@@ -2,6 +2,7 @@ import { useState } from 'react';
 import SVG from 'react-inlinesvg';
 import logo from '../../logo.svg';
 import Buscador from '../Buscador';
+import Filtros from '../Filtros';
 // TODO verificar pq imagem de cabecalho nao carrega no build do projeto
 // estilizacao do componente header no index.css
 export default function Cardapio() {
@@ -21,6 +22,9 @@ export default function Cardapio() {
 			<section className="">
 				<h3 className="text-black text-4xl my-5  px-12 sm:px-72 ">Cardápio</h3>
 				<Buscador busca={busca} setBusca={setBusca} />
+				<div className="flex items-center flex-wrap mb-7 w-full">
+					<Filtros />
+				</div>
 			</section>
 		</main>
 	);
