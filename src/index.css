@@ -9,7 +9,7 @@
 
 @layer components {
 	.cabecalho {
-		@apply bg-[url('./src/img/header.png')] h-72 w-full bg-no-repeat bg-cover flex items-center box-border;
+		@apply bg-[url('./src/img/header.png')] h-72 w-full m-auto bg-no-repeat bg-cover flex items-center box-border;
 	}
 }
 
