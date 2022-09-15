@@ -7,6 +7,7 @@ import Filtros from '../Filtros';
 // estilizacao do componente header no index.css
 export default function Cardapio() {
 	const [busca, setBusca] = useState('');
+	const [filtro, setFiltro] = useState(null);
 
 	return (
 		<main className="w-full flex flex-col flex-wrap box-border">
@@ -23,7 +24,7 @@ export default function Cardapio() {
 				<h3 className="text-black text-4xl my-5  px-12 sm:px-72 ">Cardápio</h3>
 				<Buscador busca={busca} setBusca={setBusca} />
 				<div className="flex items-center flex-wrap mb-7 w-full">
-					<Filtros />
+					<Filtros filtro={filtro} setFiltro={setFiltro} />
 				</div>
 			</section>
 		</main>
