@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SVG from 'react-inlinesvg';
 import logo from '../../logo.svg';
 import Buscador from '../Buscador';
-
+// TODO verificar pq imagem de cabecalho nao carrega no build do projeto
 // estilizacao do componente header no index.css
 export default function Cardapio() {
 	const [busca, setBusca] = useState('');
@@ -12,7 +12,8 @@ export default function Cardapio() {
 			<nav className="px-12 sm:px-72  py-5">
 				<SVG src={logo} title="Logo Aluroni" />
 			</nav>
-			<header className="cabecalho">
+
+			<header className="h-72 w-full m-auto bg-no-repeat bg-cover flex items-center box-border bg-fotoCabecalho">
 				<div className="text-white text-5xl sm:text-7xl  px-12 sm:px-72   w-full">
 					A casa do código e da massa!
 				</div>

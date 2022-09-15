@@ -1,17 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-	.cabecalho {
-		@apply bg-[url('./src/img/header.png')] h-72 w-full m-auto bg-no-repeat bg-cover flex items-center box-border;
-	}
-}
 
 * {
 	font-family: 'Italiana', serif;

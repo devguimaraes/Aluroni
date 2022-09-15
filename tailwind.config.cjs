@@ -7,6 +7,9 @@ module.exports = {
   theme: {
 
     extend: {
+			backgroundImage: {
+				'fotoCabecalho': "url('./src/img/header.png')"
+			},
 			fontFamily: {
 				'italiana': ['Italiana', 'serif']
 
