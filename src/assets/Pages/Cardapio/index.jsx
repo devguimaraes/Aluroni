@@ -3,7 +3,9 @@ import SVG from 'react-inlinesvg';
 import logo from '../../logo.svg';
 import Buscador from '../Buscador';
 import Filtros from '../Filtros';
+import Itens from '../Itens';
 import Ordenador from '../Ordenador';
+
 // TODO verificar pq imagem de cabecalho nao carrega no build do projeto
 // estilizacao do componente header no index.css
 export default function Cardapio() {
@@ -29,6 +31,7 @@ export default function Cardapio() {
 					<Filtros filtro={filtro} setFiltro={setFiltro} />
 					<Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
 				</div>
+				<Itens />
 			</section>
 		</main>
 	);
