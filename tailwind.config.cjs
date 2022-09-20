@@ -8,7 +8,7 @@ module.exports = {
 
     extend: {
 			backgroundImage: {
-				'fotoCabecalho': "url('./src/img/header.png')"
+				'fotoCabecalho': "url('/img/header.png')"
 			},
 			fontFamily: {
 				'italiana': ['Italiana', 'serif']
