@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import filtros from './filtros.json';
 
 export default function Filtros({ filtro, setFiltro }) {
@@ -10,9 +9,6 @@ export default function Filtros({ filtro, setFiltro }) {
 		return setFiltro(opcaoSelecionada.id);
 	}
 
-	useEffect(() => {
-		console.log(filtro);
-	});
 	return (
 		<div className="w-full flex justify-center sm:justify-start sm:pl-12  lg:pl-72 flex-wrap gap-8 mt-5">
 			{filtros.map((event) => (
