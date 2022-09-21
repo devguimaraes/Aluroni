@@ -7,7 +7,7 @@ export default function Item({ itens }) {
 			<div className="mt-5 w-[240px] lg:w-[480px]">
 				<img src={photo} alt={title} className="rounded-xl w-full" />
 			</div>
-			<div className="flex flex-col flex-1 justify-around  flex-wrap  px-5 md:flex-row mt-5 lg:p-0 lg:flex-row lg:mt-5">
+			<div className="flex flex-col flex-1 justify-around  flex-wrap ml-10  px-5 md:flex-row mt-5 lg:p-0 lg:flex-row lg:mt-5">
 				<div className="titulo">
 					<h2 className="text-3xl font-bold mb-5">{title}</h2>
 					<p className="text-dark-grey text-xl font-semibold mb-5">
