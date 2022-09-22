@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import SVG from 'react-inlinesvg';
-import logo from '../../logo.svg';
+
 import Buscador from '../Buscador';
 import Filtros from '../Filtros';
 import Itens from '../Itens';
@@ -15,15 +14,6 @@ export default function Cardapio() {
 
 	return (
 		<main className="w-full flex flex-col flex-wrap box-border">
-			<nav className="px-12 sm:px-72  py-5">
-				<SVG src={logo} title="Logo Aluroni" />
-			</nav>
-
-			<header className="h-72 w-full m-auto bg-no-repeat bg-cover flex items-center box-border bg-fotoCabecalho">
-				<div className="text-white text-5xl sm:text-7xl  px-12    w-full">
-					A casa do código e da massa!
-				</div>
-			</header>
 			<section className="">
 				<h3 className="text-black text-4xl my-5  px-12 sm:px-72 ">Cardápio</h3>
 				<Buscador busca={busca} setBusca={setBusca} />

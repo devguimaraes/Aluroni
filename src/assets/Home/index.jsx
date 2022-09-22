@@ -8,8 +8,8 @@ export default function Home() {
 
 	return (
 		<section>
-			<h3 className="text-black text-5xl mb-5">Recomendações da Cozinha</h3>
-			<div className="rounded-sm flex flex-wrap gap-7 justify-between">
+			<h3 className="text-black text-5xl m-5">Recomendações da Cozinha</h3>
+			<div className="rounded-sm flex flex-wrap gap-7 justify-around">
 				{pratosRecomendados.map((item) => (
 					<div key={item.id} className="recomendado">
 						<div className="w-72 mb-2">
