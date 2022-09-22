@@ -1,10 +1,9 @@
-import Home from '../Home';
-/* import Cardapio from '../Pages/Cardapio'; */
+import AppRouter from '../../routes';
 
 function App() {
 	return (
 		<div className="App">
-			<Home />
+			<AppRouter />
 		</div>
 	);
 }
