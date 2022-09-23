@@ -1,4 +1,7 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-absolute-path */
 import cardadio from '../data/cardapio.json';
+import nossaCasa from '/img/casa.png';
 
 export default function Home() {
 	let pratosRecomendados = [...cardadio];
@@ -27,6 +30,13 @@ export default function Home() {
 						</button>
 					</div>
 				))}
+			</div>
+			<h3 className="titulo"> Nossa casa </h3>
+			<div className="mb-[100px] relative w-11/12 mx-auto">
+				<img src={nossaCasa} alt="Casa do aluroni" className="rounded w-full" />
+				<div className="flex flex-col h-24 justify-center absolute w-[200px] items-center bg-black rounded bottom-[-45px] text-white font-bold left-0 right-0 mx-auto">
+					Rua Vergueiro, 3185 <br /> <br /> Vila Mariana - SP
+				</div>
 			</div>
 		</section>
 	);
