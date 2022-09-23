@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './assets/Home';
 import Cardapio from './assets/Pages/Cardapio';
 import Sobre from './assets/Pages/Sobre';
+import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Menu from './Components/Menu';
 import Page404 from './Components/Page404';
@@ -19,6 +20,7 @@ export default function AppRouter() {
 				</Route>
 				<Route path="*" element={<Page404 />} />
 			</Routes>
+			<Footer />
 		</Router>
 	);
 }
