@@ -8,7 +8,7 @@ export default function Home() {
 
 	return (
 		<section>
-			<h3 className="text-black text-5xl m-5">Recomendações da Cozinha</h3>
+			<h3 className="titulo">Recomendações da Cozinha</h3>
 			<div className="rounded-sm flex flex-wrap gap-7 justify-around">
 				{pratosRecomendados.map((item) => (
 					<div key={item.id} className="recomendado">

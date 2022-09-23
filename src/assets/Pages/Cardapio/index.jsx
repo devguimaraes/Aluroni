@@ -15,7 +15,7 @@ export default function Cardapio() {
 	return (
 		<main className="w-full flex flex-col flex-wrap box-border">
 			<section className="">
-				<h3 className="text-black text-4xl my-5  px-12 sm:px-72 ">Cardápio</h3>
+				<h3 className="titulo">Cardápio</h3>
 				<Buscador busca={busca} setBusca={setBusca} />
 				<div className="flex items-center flex-wrap mb-7 w-full">
 					<Filtros filtro={filtro} setFiltro={setFiltro} />
