@@ -1,8 +1,9 @@
 /* eslint-disable react/self-closing-comp */
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './style.css';
 
 export default function Page4040() {
+	const navigate = useNavigate();
 	return (
 		<div id="notfound">
 			<div className="notfound">
@@ -15,9 +16,16 @@ export default function Page4040() {
 					A página que você está procurando pode estar temporariamente
 					indisponivel, ter sido removida ou seu nome mudou.
 				</p>
-				<Link className="a" to="/">
-					Página Principal
-				</Link>
+				<button
+					className="a bg-black"
+					type="button"
+					onClick={() => {
+						// -1 no navigate faz o usuário voltar a tela anterior
+						navigate(-1);
+					}}
+				>
+					... Voltar
+				</button>
 			</div>
 		</div>
 	);
