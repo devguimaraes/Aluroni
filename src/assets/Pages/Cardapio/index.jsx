@@ -5,8 +5,6 @@ import Filtros from '../Filtros';
 import Itens from '../Itens';
 import Ordenador from '../Ordenador';
 
-// TODO verificar pq imagem de cabecalho nao carrega no build do projeto
-// estilizacao do componente header no index.css
 export default function Cardapio() {
 	const [busca, setBusca] = useState('');
 	const [filtro, setFiltro] = useState(null);
