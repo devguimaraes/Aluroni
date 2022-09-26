@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './assets/Home';
 import Cardapio from './assets/Pages/Cardapio';
+import Prato from './assets/Pages/Pratos';
 import Sobre from './assets/Pages/Sobre';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -19,6 +20,7 @@ export default function AppRouter() {
 					<Route path="/sobre" element={<Sobre />} />
 				</Route>
 				<Route path="*" element={<Page404 />} />
+				<Route path="pratos/:id" element={<Prato />} />
 			</Routes>
 			<Footer />
 		</Router>

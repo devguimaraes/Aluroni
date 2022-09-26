@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-absolute-path */
+import { Link, Navigate } from 'react-router-dom';
 import cardadio from '../data/cardapio.json';
 import nossaCasa from '/img/casa.png';
 
@@ -25,6 +26,9 @@ export default function Home() {
 						<button
 							type="button"
 							className="bg-red border-none rounded-md text-white font-bold cursor-pointer py-3 text-sm ease-in duration-200 w-full hover:bg-black"
+							onClick={() => {
+								console.log(item);
+							}}
 						>
 							Ver mais
 						</button>
