@@ -3,7 +3,7 @@ import logo from '../../assets/logo.svg';
 
 export default function Footer() {
 	return (
-		<footer className="bg-darkness flex justify-center p-3">
+		<footer className="bg-darkness flex justify-center p-3 mt-10">
 			<SVG src={logo} title="logo Aluroni" />
 		</footer>
 	);
