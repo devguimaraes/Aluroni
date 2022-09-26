@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-absolute-path */
-import { Link, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import cardadio from '../data/cardapio.json';
 import nossaCasa from '/img/casa.png';
 
@@ -9,6 +9,12 @@ export default function Home() {
 	pratosRecomendados = pratosRecomendados
 		.sort(() => 0.5 - Math.random())
 		.splice(0, 3);
+
+	const navigate = useNavigate();
+
+	function redirecionaPratos(params) {
+		navigate(`/pratos/${params.id}`, { state: { params }, replace: false });
+	}
 
 	return (
 		<section>
@@ -27,7 +33,7 @@ export default function Home() {
 							type="button"
 							className="bg-red border-none rounded-md text-white font-bold cursor-pointer py-3 text-sm ease-in duration-200 w-full hover:bg-black"
 							onClick={() => {
-								console.log(item);
+								redirecionaPratos(item);
 							}}
 						>
 							Ver mais
