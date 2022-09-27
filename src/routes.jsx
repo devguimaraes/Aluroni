@@ -7,7 +7,7 @@ import Sobre from './assets/Pages/Sobre';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Menu from './Components/Menu';
-import Page404 from './Components/Page404';
+import Page4040 from './Components/Page404';
 
 export default function AppRouter() {
 	return (
@@ -20,7 +20,7 @@ export default function AppRouter() {
 					<Route path="/sobre" element={<Sobre />} />
 				</Route>
 				<Route path="pratos/:id" element={<Prato />} />
-				<Route path="*" element={<Page404 />} />
+				<Route path="*" element={<Page4040 />} />
 			</Routes>
 			<Footer />
 		</Router>
