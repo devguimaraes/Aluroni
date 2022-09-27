@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Item from './item';
-import cardapio from './itens.json';
+import cardapio from '../../data/cardapio.json';
 
 export default function Itens(props) {
 	const [lista, setlista] = useState(cardapio);

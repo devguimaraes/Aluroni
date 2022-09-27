@@ -1,13 +1,18 @@
 /* eslint-disable react/destructuring-assignment */
 
+import { useNavigate } from 'react-router-dom';
+
 export default function Item({ itens }) {
-	const { title, description, category, size, price, serving, photo } = itens;
+	const { title, description, category, size, price, serving, photo, id } =
+		itens;
+	const navigate = useNavigate();
+
 	return (
 		<div className="flex flex-wrap w-11/12 m-auto">
 			<div className="mt-5 w-[240px] lg:w-[480px]">
 				<img src={photo} alt={title} className="rounded-xl w-full" />
 			</div>
-			<div className="flex flex-col flex-1 justify-around  flex-wrap  px-5 md:flex-row mt-5 lg:p-0 lg:flex-row lg:mt-5">
+			<div className="flex flex-col flex-1 justify-around  flex-wrap ml-10  px-5 md:flex-row mt-5 lg:p-0 lg:flex-row lg:mt-5">
 				<div className="titulo">
 					<h2 className="text-3xl font-bold mb-5">{title}</h2>
 					<p className="text-dark-grey text-xl font-semibold mb-5">
@@ -25,6 +30,15 @@ export default function Item({ itens }) {
 					>
 						{category.label}
 					</div>
+					<button
+						type="button"
+						className="bg-red border-none rounded-md text-white font-bold cursor-pointer py-3 text-sm ease-in duration-200  my-5  px-12 sm:px-7 hover:bg-black"
+						onClick={() => {
+							navigate(`/pratos/${id}`);
+						}}
+					>
+						Ver Mais
+					</button>
 					<div className="items-center flex text-lg font-bold justify-center py-2 px-7 m-3">
 						{size} g
 					</div>

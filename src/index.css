@@ -23,6 +23,10 @@
 	.veganos {
 		@apply items-center rounded-sm flex font-bold h-10 justify-center py-2 px-7 m-3 bg-veganos;
 	}
+
+	.titulo {
+		@apply text-black text-4xl my-5 font-bold  px-12 sm:px-72;
+	}
 }
 
 * {
@@ -32,4 +36,5 @@
 
 body {
 	background-color: #f6f6f6;
+	scroll-behavior: smooth;
 }
