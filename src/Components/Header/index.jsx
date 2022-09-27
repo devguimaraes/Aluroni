@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ children }) {
 	return (
 		<>
 			<header className="h-72 w-full m-auto bg-no-repeat bg-cover flex items-center box-border bg-fotoCabecalho">
@@ -10,6 +10,7 @@ export default function Header() {
 			</header>
 			<div>
 				<Outlet />
+				{children}
 			</div>
 		</>
 	);

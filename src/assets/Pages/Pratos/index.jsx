@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useNavigate, useParams } from 'react-router-dom';
+import Header from '../../../Components/Header';
 import Page4040 from '../../../Components/Page404';
 
 import cardapio from '../../data/cardapio.json';
@@ -10,6 +11,7 @@ export default function Pratos() {
 	const navigate = useNavigate();
 
 	const pratoSelecionado = cardapio.find((item) => item.id === Number(id));
+
 	if (!pratoSelecionado) return <Page4040 />;
 
 	const [prato] = useState([pratoSelecionado]);
@@ -25,7 +27,7 @@ export default function Pratos() {
 	});
 
 	return (
-		<>
+		<Header>
 			{prato.map((itens) => (
 				<div key={itens.id} className="my-10 mx-5">
 					<div className="flex justify-around items-center mb-5">
@@ -69,6 +71,6 @@ export default function Pratos() {
 					</button>
 				</div>
 			))}
-		</>
+		</Header>
 	);
 }
