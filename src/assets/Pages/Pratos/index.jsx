@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useNavigate, useParams } from 'react-router-dom';
+import Page4040 from '../../../Components/Page404';
 
 import cardapio from '../../data/cardapio.json';
 
@@ -9,16 +10,17 @@ export default function Pratos() {
 	const navigate = useNavigate();
 
 	const pratoSelecionado = cardapio.find((item) => item.id === Number(id));
-	if (!pratoSelecionado) return '';
+	if (!pratoSelecionado) return <Page4040 />;
 
 	const [prato] = useState([pratoSelecionado]);
 
 	useEffect(() => {
+		console.log(pratoSelecionado);
 		if (
 			(id && pratoSelecionado === null) ||
 			(id && pratoSelecionado === undefined)
 		) {
-			navigate('/');
+			<Page4040 />;
 		}
 	});
 
